@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Jacob LeGrone",
+      "authorEmail": "npm@jacob.work",
+      "authorUrl": "https://jacoblegrone.com"
+    }
+  }
+}

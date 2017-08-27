@@ -1,0 +1,48 @@
+{
+  "name": "generator-semantic-module",
+  "version": "0.0.0-alpha.1",
+  "description": "Initialize a project with conventional commits, commitizen, and commit linting.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlegrone/generator-semantic-module.git"
+  },
+  "author": "Jacob LeGrone <dev@jacoblegrone.com> (https://jacoblegrone.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlegrone/generator-semantic-module/issues"
+  },
+  "homepage": "https://github.com/jlegrone/generator-semantic-module#readme",
+  "files": ["generators"],
+  "main": "generators/index.js",
+  "keywords": ["conventional commits", "commitizen", "yeoman-generator"],
+  "devDependencies": {
+    "coveralls": "^2.13.1",
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.0",
+    "nsp": "^2.6.3",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.6.0"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "yeoman-generator": "^1.0.0",
+    "yosay": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "lint": "eslint ./",
+    "prepublish": "nsp check",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  }
+}
