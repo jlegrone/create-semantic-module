@@ -16,18 +16,20 @@ npm install -g yo
 npm install -g generator-semantic-module
 ```
 
-Then generate your new project:
+## Usage
+
+Generate a new project:
 
 ```bash
-yo semantic-module
+yo semantic-module my-module-name
 ```
 
-## Getting To Know Yeoman
+Or run from within an existing project:
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+```bash
+cd ./my-module-name
+yo semantic-module
+```
 
 ## License
 
