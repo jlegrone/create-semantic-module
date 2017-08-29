@@ -1,13 +1,16 @@
 'use strict';
-var path = require('path');
-var assert = require('yeoman-assert');
-var helpers = require('yeoman-test');
+const path = require('path');
+const assert = require('yeoman-assert');
+const helpers = require('yeoman-test');
 
 describe('generator-semantic-module:app', () => {
   beforeAll(() => {
-    return helpers
-      .run(path.join(__dirname, '../generators/app'))
-      .withPrompts({packager: 'yarn'});
+    return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({
+      packager: 'yarn',
+      'semantic-release': false,
+      'commitizen-adapter': 'cz-customizable',
+      'commitlint-config': '@commitlint/config-angular'
+    });
   });
 
   it('creates files', () => {

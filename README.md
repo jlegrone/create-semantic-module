@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
-[![Coverage percentage][coveralls-image]][coveralls-url]
+[![Coverage percentage][codecov-image]][codecov-url]
 
 > Initialize a project with conventional commits, commitizen, and commit linting.
 
@@ -42,5 +42,5 @@ MIT © [Jacob LeGrone](https://jacoblegrone.com)
 [travis-url]: https://travis-ci.org/jlegrone/generator-semantic-module
 [daviddm-image]: https://david-dm.org/jlegrone/generator-semantic-module.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/jlegrone/generator-semantic-module
-[coveralls-image]: https://coveralls.io/repos/jlegrone/generator-semantic-module/badge.svg
-[coveralls-url]: https://coveralls.io/r/jlegrone/generator-semantic-module
+[codecov-image]: https://codecov.io/gh/jlegrone/generator-semantic-module/branch/develop/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/jlegrone/generator-semantic-module

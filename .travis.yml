@@ -1,6 +1,14 @@
 language: node_js
 node_js:
   - 7
-  - 6
-  - 4
-after_script: 'cat ./coverage/lcov.info | coveralls'
+  # - 6
+  # - 4
+before_install:
+  - npm install -g yarn codecov
+install:
+  - yarn install
+script:
+  - yarn lint
+  - yarn test -- --verbose
+after_script:
+  - codecov

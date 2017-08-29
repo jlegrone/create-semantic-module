@@ -12,15 +12,9 @@
     "url": "https://github.com/jlegrone/generator-semantic-module/issues"
   },
   "homepage": "https://github.com/jlegrone/generator-semantic-module#readme",
-  "files": [
-    "generators"
-  ],
+  "files": ["generators"],
   "main": "generators/index.js",
-  "keywords": [
-    "conventional commits",
-    "commitizen",
-    "yeoman-generator"
-  ],
+  "keywords": ["conventional commits", "commitizen", "yeoman-generator"],
   "devDependencies": {
     "@commitlint/cli": "^3.1.3",
     "@commitlint/config-angular": "^3.1.1",
@@ -47,7 +41,8 @@
   "scripts": {
     "lint": "eslint ./",
     "prepublish": "nsp check",
-    "test": "jest",
+    "test": "jest --coverage",
+    "test:watch": "npm run test -- --coverage false --watch",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commitmsg": "commitlint -e"
