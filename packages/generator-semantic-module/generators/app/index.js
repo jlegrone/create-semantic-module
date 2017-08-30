@@ -18,14 +18,20 @@ const defaults = {
 };
 
 module.exports = class extends Generator {
-  constructor([moduleName]) {
+  constructor([moduleNameArg]) {
     super(...arguments);
+
+    const moduleName = this.options[options.moduleName] || moduleNameArg;
+    const promptPackager = this.options[options.packager] === undefined;
 
     if (moduleName) {
       this.destinationRoot(moduleName);
       this.config.set({[options.moduleName]: moduleName});
     }
 
+    this.props = {
+      promptPackager
+    };
     this.config.defaults(defaults);
   }
 
@@ -40,13 +46,6 @@ module.exports = class extends Generator {
     ];
 
     const prompts = [
-      {
-        type: 'list',
-        name: options.packager,
-        message: 'Which packager do you use?',
-        default: this.config.get(options.packager),
-        choices: ['npm', 'yarn']
-      },
       // {
       //   type: 'confirm',
       //   name: options.semanticRelease,
@@ -76,6 +75,16 @@ module.exports = class extends Generator {
         ]
       }
     ];
+
+    if (this.props.promptPackager) {
+      prompts.unshift({
+        type: 'list',
+        name: options.packager,
+        message: 'Which packager do you use?',
+        default: this.config.get(options.packager),
+        choices: ['npm', 'yarn']
+      });
+    }
 
     let props = await this.prompt(prompts);
     if (props[options.commitlintConfig] === 'custom') {

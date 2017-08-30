@@ -1,34 +1,24 @@
-# generator-semantic-module
+# Create Semantic Module
 
-[![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Coverage percentage][codecov-image]][codecov-url]
 
 > Initialize a project with conventional commits, commitizen, and commit linting.
 
-## Installation
-
-First, install [Yeoman](http://yeoman.io) and generator-semantic-module using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
-
-```bash
-npm install -g yo
-npm install -g generator-semantic-module
-```
-
 ## Usage
 
 Generate a new project:
 
 ```bash
-yo semantic-module my-module-name
+yarn create semantic-module my-module-name
 ```
 
 Or run from within an existing project:
 
 ```bash
 cd ./my-module-name
-yo semantic-module
+yarn create semantic-module
 ```
 
 ## License
@@ -36,8 +26,6 @@ yo semantic-module
 MIT © [Jacob LeGrone](https://jacoblegrone.com)
 
 
-[npm-image]: https://badge.fury.io/js/generator-semantic-module.svg
-[npm-url]: https://npmjs.org/package/generator-semantic-module
 [travis-image]: https://travis-ci.org/jlegrone/generator-semantic-module.svg?branch=master
 [travis-url]: https://travis-ci.org/jlegrone/generator-semantic-module
 [daviddm-image]: https://david-dm.org/jlegrone/generator-semantic-module.svg?theme=shields.io

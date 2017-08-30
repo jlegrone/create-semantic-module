@@ -1,0 +1,29 @@
+{
+  "name": "create-semantic-module",
+  "version": "0.0.0",
+  "description": "Initialize a project with conventional commits, commitizen, and commit linting.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlegrone/create-semantic-module.git"
+  },
+  "author": "Jacob LeGrone <npm@jacob.work> (https://jacoblegrone.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlegrone/create-semantic-module/issues"
+  },
+  "homepage": "https://github.com/jlegrone/create-semantic-module#readme",
+  "bin": {
+    "create-semantic-module": "./index.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "generator-semantic-module": "^0.0.0",
+    "yeoman-environment": "^2.0.2"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "generator-semantic-module",
+  "version": "0.0.0",
+  "description": "Initialize a project with conventional commits, commitizen, and commit linting.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlegrone/create-semantic-module.git"
+  },
+  "author": "Jacob LeGrone <npm@jacob.work> (https://jacoblegrone.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlegrone/create-semantic-module/issues"
+  },
+  "homepage": "https://github.com/jlegrone/create-semantic-module#readme",
+  "files": [
+    "generators"
+  ],
+  "main": "generators/app/index.js",
+  "keywords": [
+    "conventional commits",
+    "commitizen",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.0",
+    "nsp": "^2.6.3",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.6.0"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "yeoman-generator": "^1.0.0",
+    "yosay": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "test": "jest"
+  }
+}
