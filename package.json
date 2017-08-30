@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "lint": "eslint ./",
     "test": "jest --projects packages/* --coverage",
     "test:watch": "yarn test -- --watch --coverage false",
     "prerelease": "yarn test",
@@ -15,6 +16,8 @@
     "@commitlint/config-angular": "^3.1.1",
     "commitizen": "^2.9.6",
     "cz-customizable": "^5.2.0",
+    "eslint": "^4.5.0",
+    "eslint-config-xo-space": "^0.16.0",
     "husky": "^0.14.3",
     "lerna": "^2.1.1"
   },

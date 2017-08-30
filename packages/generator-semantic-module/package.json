@@ -16,8 +16,6 @@
   "main": "generators/app/index.js",
   "keywords": ["conventional commits", "commitizen", "yeoman-generator"],
   "devDependencies": {
-    "eslint": "^4.1.0",
-    "eslint-config-xo-space": "^0.16.0",
     "jest": "^20.0.4",
     "jest-cli": "^20.0.0",
     "nsp": "^2.6.3",
@@ -33,15 +31,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "lint": "eslint ./",
     "prepublish": "nsp check",
     "test": "jest"
-  },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "jest": true,
-      "node": true
-    }
   }
 }

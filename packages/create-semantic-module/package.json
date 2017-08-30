@@ -16,15 +16,14 @@
   "bin": {
     "create-semantic-module": "./index.js"
   },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "jest": true,
-      "node": true
-    }
+  "scripts": {
+    "test": "jest"
   },
   "dependencies": {
     "generator-semantic-module": "^0.0.0-alpha.1",
     "yeoman-environment": "^2.0.2"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4"
   }
 }
