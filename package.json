@@ -5,7 +5,7 @@
     "test": "jest --projects packages/* --coverage",
     "test:watch": "yarn test -- --watch --coverage false",
     "prerelease": "yarn test",
-    "release": "lerna publish --conventional-commits --canary",
+    "release": "lerna publish --conventional-commits --message \"chore(npm): publish\"",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commitmsg": "commitlint -e"
