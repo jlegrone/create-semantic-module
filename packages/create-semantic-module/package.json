@@ -1,6 +1,6 @@
 {
   "name": "create-semantic-module",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0",
   "description": "Initialize a project with conventional commits, commitizen, and commit linting.",
   "main": "index.js",
   "repository": {
@@ -20,7 +20,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "generator-semantic-module": "^0.0.0-alpha.1",
+    "generator-semantic-module": "^0.0.0",
     "yeoman-environment": "^2.0.2"
   },
   "devDependencies": {
