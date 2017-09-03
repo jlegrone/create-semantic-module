@@ -17,6 +17,16 @@ const defaults = {
   [options.commitlintConfig]: '@commitlint/config-angular'
 };
 
+function getCLIOptions(optionsObj) {
+  const optionsKeys = Object.keys(options);
+  return Object.keys(optionsObj)
+    .filter(key => optionsKeys.includes(key))
+    .reduce((obj, key) => {
+      obj[key] = optionsObj[key];
+      return obj;
+    }, {});
+}
+
 module.exports = class extends Generator {
   constructor([moduleNameArg]) {
     super(...arguments);
@@ -32,7 +42,9 @@ module.exports = class extends Generator {
     this.props = {
       promptPackager
     };
-    this.config.defaults(defaults);
+    this.config.defaults(
+      Object.assign({}, defaults, getCLIOptions(this.options))
+    );
   }
 
   async prompting() {
