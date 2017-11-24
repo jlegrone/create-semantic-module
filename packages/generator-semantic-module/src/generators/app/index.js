@@ -1,6 +1,6 @@
-'use strict';
-const Generator = require('yeoman-generator');
-const yosay = require('yosay');
+import 'babel-polyfill';
+import Generator from 'yeoman-generator';
+import yosay from 'yosay';
 
 const options = {
   moduleName: 'module-name',

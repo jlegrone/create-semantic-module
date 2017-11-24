@@ -30,6 +30,7 @@
     "yeoman-test": "^1.6.0"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "chalk": "^2.1.0",
     "yeoman-generator": "^1.0.0",
     "yosay": "^2.0.0"
