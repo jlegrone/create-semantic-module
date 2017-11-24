@@ -9,15 +9,5 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
+* **generator:** enable overriding default options with CLI flags ([ce39c64](https://github.com/jlegrone/create-semantic-module/commit/ce39c64))
 * transpile to support node 4.x ([6ed2d35](https://github.com/jlegrone/create-semantic-module/commit/6ed2d35))
-
-
-
-
-<a name="0.0.0"></a>
-# 0.0.0 (2017-08-30)
-
-
-### Features
-
-* initialize create-semantic-module package ([d201e69](https://github.com/jlegrone/create-semantic-module/commit/d201e69))
