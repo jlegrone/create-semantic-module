@@ -36,5 +36,5 @@ MIT © [Jacob LeGrone](https://jacoblegrone.com)
 
 [travis-image]: https://travis-ci.org/jlegrone/create-semantic-module.svg?branch=master
 [travis-url]: https://travis-ci.org/jlegrone/create-semantic-module
-[codecov-image]: https://codecov.io/gh/jlegrone/create-semantic-module/branch/develop/graph/badge.svg
+[codecov-image]: https://codecov.io/gh/jlegrone/create-semantic-module/branch/master/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/jlegrone/create-semantic-module
