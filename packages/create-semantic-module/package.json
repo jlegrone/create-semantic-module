@@ -2,7 +2,7 @@
   "name": "create-semantic-module",
   "version": "0.0.0",
   "description": "Initialize a project with conventional commits, commitizen, and commit linting.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jlegrone/create-semantic-module.git"
@@ -17,16 +17,24 @@
     "create-semantic-module": "./bin/create-semantic-module.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "rimraf lib && babel src -d lib",
+    "prepublish": "yarn run build"
   },
   "dependencies": {
     "generator-semantic-module": "^0.0.0",
     "yeoman-environment": "^2.0.2"
   },
   "devDependencies": {
-    "jest": "^21.2.1"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1",
+    "rimraf": "^2.6.2"
   },
   "jest": {
     "testEnvironment": "node"
+  },
+  "engines": {
+    "node": ">=4.5.0"
   }
 }

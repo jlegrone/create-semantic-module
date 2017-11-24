@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "4.5.0"
+      }
+    }]
+  ],
+  "ignore": [
+    "**/templates/**",
+    "**/__tests__/**",
+    "**/__mocks__/**"
+  ]
+}

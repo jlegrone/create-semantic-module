@@ -18,7 +18,7 @@ const defaults = {
 function getCLIOptions(optionsObj) {
   const optionsKeys = Object.keys(options);
   return Object.keys(optionsObj)
-    .filter(key => optionsKeys.includes(key))
+    .filter(key => optionsKeys.indexOf(key) !== -1)
     .reduce((obj, key) => {
       obj[key] = optionsObj[key];
       return obj;

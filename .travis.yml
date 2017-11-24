@@ -1,18 +1,19 @@
 language: node_js
 node_js:
   - 8
-  # - 6
-  # - 4
+  - 6
+  - 4
 before_install:
   - npm install -g yarn codecov
 install:
-  - yarn install
+  - yarn install --ignore-engines
 script:
   - if [[ $(node --version) == v4* ]];
     then echo "Running node 4; skipping commitlint.";
     else ./node_modules/.bin/commitlint --from="$TRAVIS_BRANCH" --to="$TRAVIS_COMMIT";
     fi
   - yarn lint
-  - yarn test -- --verbose
+  - yarn build
+  - yarn test --verbose
 after_script:
   - codecov

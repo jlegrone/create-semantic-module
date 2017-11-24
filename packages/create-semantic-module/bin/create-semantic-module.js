@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('../')(process.argv.slice(2));
+require('../lib')(process.argv.slice(2));

@@ -12,19 +12,20 @@
     "url": "https://github.com/jlegrone/create-semantic-module/issues"
   },
   "homepage": "https://github.com/jlegrone/create-semantic-module#readme",
-  "files": [
-    "generators"
-  ],
-  "main": "generators/app/index.js",
+  "main": "lib/generators/app/index.js",
   "keywords": [
     "conventional commits",
     "commitizen",
     "yeoman-generator"
   ],
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "jest": "^21.2.1",
     "jest-cli": "^21.2.1",
+    "ncp": "^2.0.0",
     "nsp": "^3.1.0",
+    "rimraf": "^2.6.2",
     "yeoman-assert": "^3.0.0",
     "yeoman-test": "^1.6.0"
   },
@@ -37,7 +38,11 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
+    "build": "rimraf lib && ncp src lib && rimraf lib/__tests__ && babel src -d lib",
+    "prepublish": "nsp check && yarn run build",
     "test": "jest"
+  },
+  "engines": {
+    "node": ">=4.5.0"
   }
 }

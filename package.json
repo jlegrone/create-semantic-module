@@ -1,10 +1,11 @@
 {
   "private": true,
   "scripts": {
+    "build": "lerna run --parallel build",    
     "lint": "eslint ./",
     "test": "jest --forceExit",
     "test:watch": "yarn test -- --watch --coverage false",
-    "prerelease": "yarn test",
+    "prerelease": "yarn test --no-cache",
     "release": "lerna publish --conventional-commits --message \"chore(npm): publish\"",
     "commit": "git-cz",
     "commit:retry": "git-cz --retry",
