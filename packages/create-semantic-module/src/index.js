@@ -9,7 +9,6 @@ function createSemanticModule(args) {
   );
 
   env.run('semantic-module:app', {
-    packager: 'yarn',
     'module-name': (args || [])[0]
   });
 }
