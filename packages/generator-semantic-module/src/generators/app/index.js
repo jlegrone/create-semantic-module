@@ -1,6 +1,6 @@
-'use strict';
-const Generator = require('yeoman-generator');
-const yosay = require('yosay');
+import 'babel-polyfill';
+import Generator from 'yeoman-generator';
+import yosay from 'yosay';
 
 const options = {
   moduleName: 'module-name',
@@ -18,7 +18,7 @@ const defaults = {
 function getCLIOptions(optionsObj) {
   const optionsKeys = Object.keys(options);
   return Object.keys(optionsObj)
-    .filter(key => optionsKeys.includes(key))
+    .filter(key => optionsKeys.indexOf(key) !== -1)
     .reduce((obj, key) => {
       obj[key] = optionsObj[key];
       return obj;

@@ -1,4 +1,6 @@
 node_modules
 coverage
+lib
 
 *-error.log
+*-debug.log
