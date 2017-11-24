@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/jlegrone/create-semantic-module#readme",
   "bin": {
-    "create-semantic-module": "./index.js"
+    "create-semantic-module": "./bin/create-semantic-module.js"
   },
   "scripts": {
     "test": "jest"
@@ -24,6 +24,9 @@
     "yeoman-environment": "^2.0.2"
   },
   "devDependencies": {
-    "jest": "^20.0.4"
+    "jest": "^21.2.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

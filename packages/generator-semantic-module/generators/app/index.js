@@ -5,17 +5,25 @@ const yosay = require('yosay');
 const options = {
   moduleName: 'module-name',
   packager: 'packager',
-  semanticRelease: 'semantic-release',
   commitizenAdapter: 'commitizen-adapter',
   commitlintConfig: 'commitlint-config'
 };
 
 const defaults = {
   [options.packager]: 'npm',
-  [options.semanticRelease]: false,
   [options.commitizenAdapter]: '@commitlint/prompt',
   [options.commitlintConfig]: '@commitlint/config-angular'
 };
+
+function getCLIOptions(optionsObj) {
+  const optionsKeys = Object.keys(options);
+  return Object.keys(optionsObj)
+    .filter(key => optionsKeys.includes(key))
+    .reduce((obj, key) => {
+      obj[key] = optionsObj[key];
+      return obj;
+    }, {});
+}
 
 module.exports = class extends Generator {
   constructor([moduleNameArg]) {
@@ -32,7 +40,9 @@ module.exports = class extends Generator {
     this.props = {
       promptPackager
     };
-    this.config.defaults(defaults);
+    this.config.defaults(
+      Object.assign({}, defaults, getCLIOptions(this.options))
+    );
   }
 
   async prompting() {
@@ -46,12 +56,6 @@ module.exports = class extends Generator {
     ];
 
     const prompts = [
-      // {
-      //   type: 'confirm',
-      //   name: options.semanticRelease,
-      //   message: 'Enable semantic-release?',
-      //   default: this.config.get(options.semanticRelease)
-      // },
       {
         type: 'list',
         name: options.commitizenAdapter,
@@ -151,10 +155,6 @@ module.exports = class extends Generator {
     const commitLintConfig = this.config.get(options.commitlintConfig);
     if (commitLintConfig) {
       packages.push(commitLintConfig);
-    }
-
-    if (this.config.get(options.semanticRelease)) {
-      packages.push('semantic-release');
     }
 
     const packager = this.config.get(options.packager);
