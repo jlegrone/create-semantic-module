@@ -1,7 +1,6 @@
 # Create Semantic Module
 
 [![Build Status][travis-image]][travis-url]
-[![Dependency Status][daviddm-image]][daviddm-url]
 [![Coverage percentage][codecov-image]][codecov-url]
 
 > `create-semantic-module` makes it easy to start using [conventional commits](https://conventionalcommits.org/) in new or existing projects.
@@ -25,6 +24,11 @@ cd ./my-module-name
 yarn create semantic-module
 ```
 
+If using npm 5.2.0 or later, you can also use `npx`:
+```bash
+npx create-semantic-module my-module-name
+```
+
 ## License
 
 MIT © [Jacob LeGrone](https://jacoblegrone.com)
@@ -32,7 +36,5 @@ MIT © [Jacob LeGrone](https://jacoblegrone.com)
 
 [travis-image]: https://travis-ci.org/jlegrone/create-semantic-module.svg?branch=master
 [travis-url]: https://travis-ci.org/jlegrone/create-semantic-module
-[daviddm-image]: https://david-dm.org/jlegrone/create-semantic-module.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/jlegrone/create-semantic-module
 [codecov-image]: https://codecov.io/gh/jlegrone/create-semantic-module/branch/develop/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/jlegrone/create-semantic-module
