@@ -4,7 +4,11 @@
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Coverage percentage][codecov-image]][codecov-url]
 
-> Initialize a project with conventional commits, commitizen, and commit linting.
+> `create-semantic-module` makes it easy to start using [conventional commits](https://conventionalcommits.org/) in new or existing projects.
+
+Adding conventional commits to your development workflow can be a big change when you work on a project with multiple contributors.
+
+Tools like [commitizen](http://commitizen.github.io/cz-cli/) and [commitlint](http://marionebl.github.io/commitlint) do a great job of easing this transition, but configuring them to work together requires some boilerplate.  That's where `create-semantic-module` comes in!
 
 ## Usage
 

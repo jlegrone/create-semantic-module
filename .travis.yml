@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 7
+  - 8
   # - 6
   # - 4
 before_install:
@@ -8,6 +8,10 @@ before_install:
 install:
   - yarn install
 script:
+  - if [[ $(node --version) == v4* ]];
+    then echo "Running node 4; skipping commitlint.";
+    else ./node_modules/.bin/commitlint --from="$TRAVIS_BRANCH" --to="$TRAVIS_COMMIT";
+    fi
   - yarn lint
   - yarn test -- --verbose
 after_script:
