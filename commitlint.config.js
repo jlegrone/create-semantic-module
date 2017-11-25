@@ -7,7 +7,7 @@ const validScopes = scopes.map(scope => scope.name);
 const scopeValidationLevel = allowCustomScopes ? 1 : 2;
 
 module.exports = {
-  extends: ['@commitlint/config-angular'],
+  extends: ['@commitlint/config-conventional'],
 
   // Add your own rules. See http://marionebl.github.io/commitlint
   rules: {
