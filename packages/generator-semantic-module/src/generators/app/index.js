@@ -161,8 +161,12 @@ You can always run create-semantic-module again and select a different option.`)
     }
 
     const packager = this.config.get(options.packager);
-    this.runInstall(packager, packages, {
-      [packager === 'yarn' ? 'dev' : 'save-dev']: true
-    });
+    const installFlags = packager === 'yarn' ? {
+      dev: true,
+      'ignore-workspace-root-check': true
+    } : {
+      'save-dev': true
+    };
+    this.runInstall(packager, packages, installFlags);
   }
 };
