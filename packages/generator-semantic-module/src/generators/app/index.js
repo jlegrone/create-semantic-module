@@ -12,7 +12,7 @@ const options = {
 const defaults = {
   [options.packager]: 'npm',
   [options.commitizenAdapter]: '@commitlint/prompt',
-  [options.commitlintConfig]: '@commitlint/config-angular'
+  [options.commitlintConfig]: '@commitlint/config-conventional'
 };
 
 function getCLIOptions(optionsObj) {
@@ -47,9 +47,12 @@ module.exports = class extends Generator {
 
   async prompting() {
     this.log(yosay('No bad commits for you!'));
+    this.log(`If you are unsure of which option to choose, go with the default.
+You can always run create-semantic-module again and select a different option.`);
 
     const commitLintDefault = this.config.get(options.commitlintConfig);
     const commitLintConfigValues = [
+      '@commitlint/config-conventional',
       '@commitlint/config-angular',
       '@commitlint/config-lerna-scopes',
       '@commitlint/config-patternplate'
