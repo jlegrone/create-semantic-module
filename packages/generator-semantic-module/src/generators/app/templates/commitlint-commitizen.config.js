@@ -13,9 +13,6 @@ module.exports = {<% if (commitlintConfig) { %>
   rules: {
     // Apply valid scopes and types
     'scope-enum': [scopeValidationLevel, 'always', validScopes],
-    'type-enum': [2, 'always', validTypes],
-
-    // Disable language rule
-    lang: [0, 'always', 'eng']
+    'type-enum': [2, 'always', validTypes]
   }
 };
