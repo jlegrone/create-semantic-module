@@ -25,7 +25,7 @@ function getCLIOptions(optionsObj) {
     }, {});
 }
 
-module.exports = class extends Generator {
+class SemanticModuleGenerator extends Generator {
   constructor([moduleNameArg]) {
     super(...arguments);
 
@@ -147,7 +147,7 @@ You can always run create-semantic-module again and select a different option.`)
     this.fs.extendJSON(this.destinationPath('package.json'), packageJSON);
   }
 
-  install() {
+  async install() {
     const packages = [
       'commitizen',
       '@commitlint/cli',
@@ -167,6 +167,8 @@ You can always run create-semantic-module again and select a different option.`)
     } : {
       'save-dev': true
     };
-    this.runInstall(packager, packages, installFlags);
+    await this.runInstall(packager, packages, installFlags);
   }
-};
+}
+
+module.exports = SemanticModuleGenerator;
