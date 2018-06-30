@@ -1,6 +1,6 @@
 {
   "name": "generator-semantic-module",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Initialize a project with conventional commits, commitizen, and commit linting.",
   "repository": {
     "type": "git",
