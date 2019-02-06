@@ -1,6 +1,6 @@
-import 'babel-polyfill';
-import Generator from 'yeoman-generator';
-import yosay from 'yosay';
+require('babel-polyfill');
+const Generator = require('yeoman-generator');
+const yosay = require('yosay');
 
 const options = {
   moduleName: 'module-name',
@@ -147,7 +147,7 @@ You can always run create-semantic-module again and select a different option.`)
     this.fs.extendJSON(this.destinationPath('package.json'), packageJSON);
   }
 
-  async install() {
+  install() {
     const packages = [
       'commitizen',
       '@commitlint/cli',
@@ -160,14 +160,24 @@ You can always run create-semantic-module again and select a different option.`)
       packages.push(commitLintConfig);
     }
 
-    const packager = this.config.get(options.packager);
-    const installFlags = packager === 'yarn' ? {
-      dev: true,
-      'ignore-workspace-root-check': true
-    } : {
-      'save-dev': true
-    };
-    await this.runInstall(packager, packages, installFlags);
+    const useYarn = this.config.get(options.packager) === 'yarn';
+
+    if (useYarn) {
+      this.yarnInstall(packages, {
+        dev: true,
+        'ignore-workspace-root-check': true
+      });
+    } else {
+      this.npmInstall(packages, {
+        'save-dev': true
+      });
+    }
+
+    this.installDependencies({
+      yarn: useYarn,
+      npm: !useYarn,
+      bower: false
+    });
   }
 }
 

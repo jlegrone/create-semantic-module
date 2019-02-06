@@ -1,6 +1,6 @@
 {
   "name": "create-semantic-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Initialize a project with conventional commits, commitizen, and commit linting.",
   "main": "lib/index.js",
   "repository": {
@@ -22,13 +22,13 @@
     "prepublish": "yarn run build"
   },
   "dependencies": {
-    "generator-semantic-module": "^1.0.0",
+    "generator-semantic-module": "^1.0.1",
     "yeoman-environment": "^2.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "jest": "^23.2.0",
+    "jest": "^24.1.0",
     "rimraf": "^2.6.2"
   },
   "jest": {

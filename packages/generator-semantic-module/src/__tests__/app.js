@@ -2,6 +2,10 @@
 const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
+const {promisify} = require('es6-promisify');
+const fs = require('fs');
+
+const readFile = promisify(fs.readFile);
 
 describe('use command line arguments', () => {
   beforeAll(() => {
@@ -18,8 +22,8 @@ describe('use command line arguments', () => {
       });
   });
 
-  it('creates files', () => {
-    assert.file([
+  it('creates files', async () => {
+    await checkFiles([
       'commitlint.config.js',
       'commitizen.config.js',
       'package.json'
@@ -27,7 +31,7 @@ describe('use command line arguments', () => {
   });
 });
 
-describe('create new module', () => {
+describe('create new module', async () => {
   beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
       .withArguments(['my-module'])
@@ -42,10 +46,19 @@ describe('create new module', () => {
     expect(process.cwd().endsWith('/my-module')).toBe(true);
   });
 
-  it('creates files', () => {
-    assert.file([
+  it('creates files', async () => {
+    await checkFiles([
       'commitlint.config.js',
       'package.json'
     ]);
   });
 });
+
+async function checkFiles(files) {
+  assert.file(files);
+
+  return Promise.all(files.map(async file => {
+    const contents = await readFile(file);
+    expect(contents.toString()).toMatchSnapshot(file);
+  }));
+}
