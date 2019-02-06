@@ -28,7 +28,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "jest": "^23.2.0",
+    "jest": "^24.1.0",
     "rimraf": "^2.6.2"
   },
   "jest": {
