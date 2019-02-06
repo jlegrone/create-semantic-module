@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/jlegrone/create-semantic-module/compare/v1.0.0...v1.0.1) (2019-02-06)
+
+
+### Bug Fixes
+
+* **install:** invoke npm install hook ([2294f89](https://github.com/jlegrone/create-semantic-module/commit/2294f89))
+
+
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/jlegrone/create-semantic-module/compare/v0.2.0...v1.0.0) (2018-06-30)
 
