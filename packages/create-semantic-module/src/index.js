@@ -1,7 +1,7 @@
-import {createEnv} from 'yeoman-environment';
+const yoEnv = require('yeoman-environment');
 
-function createSemanticModule(args) {
-  const env = createEnv();
+function createSemanticModule(args = []) {
+  const env = yoEnv.createEnv();
 
   env.register(
     require.resolve('generator-semantic-module'),
@@ -9,7 +9,7 @@ function createSemanticModule(args) {
   );
 
   env.run('semantic-module:app', {
-    'module-name': (args || [])[0]
+    'module-name': (args)[0]
   });
 }
 

@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create new module creates files: commitlint.config.js 1`] = `
+"/* eslint-env node */
+
+module.exports = {// Add your own rules. See http://marionebl.github.io/commitlint
+  rules: {
+  }
+};
+"
+`;
+
+exports[`create new module creates files: package.json 1`] = `
+"{
+  \\"config\\": {
+    \\"commitizen\\": {
+      \\"path\\": \\"node_modules/@commitlint/prompt\\"
+    }
+  },
+  \\"scripts\\": {
+    \\"commit\\": \\"git-cz\\",
+    \\"commit:retry\\": \\"git-cz --retry\\",
+    \\"commitmsg\\": \\"commitlint -e\\"
+  }
+}
+"
+`;
+
+exports[`use command line arguments creates files: commitizen.config.js 1`] = `
+"/* eslint-env node */
+
+const types = [
+  {
+    value: 'feat',
+    name: 'feat:     A new feature'
+  },
+  {
+    value: 'fix',
+    name: 'fix:      A bug fix'
+  },
+  {
+    value: 'docs',
+    name: 'docs:     Documentation only changes'
+  },
+  {
+    value: 'style',
+    name: \`style:    Changes that do not affect the meaning of the code
+            (white-space, formatting, missing semi-colons, etc)\`
+  },
+  {
+    value: 'refactor',
+    name: 'refactor: A code change that neither fixes a bug nor adds a feature'
+  },
+  {
+    value: 'perf',
+    name: 'perf:     A code change that improves performance'
+  },
+  {
+    value: 'test',
+    name: 'test:     Adding missing tests'
+  },
+  {
+    value: 'chore',
+    name: \`chore:    Changes to the build process or auxiliary tools
+            and libraries such as documentation generation\`
+  },
+  {
+    value: 'revert',
+    name: 'revert:   Revert to a commit'
+  }
+];
+
+const scopes = [
+  'example-1',
+  'example-2'
+].map(name => ({ name }));
+
+module.exports = {
+  types,
+  scopes,
+  allowCustomScopes: true,
+  allowBreakingChanges: [
+    'feat',
+    'fix',
+    'perf',
+    'refactor'
+  ]
+};
+"
+`;
+
+exports[`use command line arguments creates files: commitlint.config.js 1`] = `
+"/* eslint-env node */
+
+const { types, scopes, allowCustomScopes } = require('./commitizen.config');
+
+const validTypes = types.map((type) => type.value);
+const validScopes = scopes.map((scope) => scope.name);
+const scopeValidationLevel = allowCustomScopes ? 1 : 2;
+
+module.exports = {
+  extends: ['@commitlint/config-lerna-scopes'],
+
+  // Add your own rules. See http://marionebl.github.io/commitlint
+  rules: {
+    // Apply valid scopes and types
+    'scope-enum': [scopeValidationLevel, 'always', validScopes],
+    'type-enum': [2, 'always', validTypes]
+  }
+};
+"
+`;
+
+exports[`use command line arguments creates files: package.json 1`] = `
+"{
+  \\"config\\": {
+    \\"commitizen\\": {
+      \\"path\\": \\"node_modules/cz-customizable\\"
+    },
+    \\"cz-customizable\\": {
+      \\"config\\": \\"commitizen.config.js\\"
+    }
+  },
+  \\"scripts\\": {
+    \\"commit\\": \\"git-cz\\",
+    \\"commit:retry\\": \\"git-cz --retry\\",
+    \\"commitmsg\\": \\"commitlint -e\\"
+  }
+}
+"
+`;
