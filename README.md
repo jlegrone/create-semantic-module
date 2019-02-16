@@ -1,5 +1,7 @@
 # Create Semantic Module
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jlegrone/create-semantic-module.svg)](https://greenkeeper.io/)
+
 [![Build Status][travis-image]][travis-url]
 [![Coverage percentage][codecov-image]][codecov-url]
 
