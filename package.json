@@ -17,7 +17,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
     "@commitlint/config-conventional": "^8.3.4",
-    "@commitlint/travis-cli": "^7.5.0",
+    "@commitlint/travis-cli": "^8.3.4",
     "codecov": "^3.1.0",
     "commitizen": "^3.0.5",
     "cz-customizable": "^6.0.0",
