@@ -26,7 +26,7 @@
     "jest-cli": "^24.1.0",
     "ncp": "^2.0.0",
     "nsp": "^3.1.0",
-    "rimraf": "^2.6.2",
+    "rimraf": "^3.0.2",
     "yeoman-assert": "^3.0.0",
     "yeoman-test": "^1.6.0"
   },
