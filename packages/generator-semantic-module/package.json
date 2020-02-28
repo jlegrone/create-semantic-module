@@ -28,7 +28,7 @@
     "nsp": "^3.1.0",
     "rimraf": "^2.6.2",
     "yeoman-assert": "^3.0.0",
-    "yeoman-test": "^1.6.0"
+    "yeoman-test": "^2.2.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
