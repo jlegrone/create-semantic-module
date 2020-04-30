@@ -19,7 +19,7 @@
     "@commitlint/config-conventional": "^7.5.0",
     "@commitlint/travis-cli": "^7.5.0",
     "codecov": "^3.1.0",
-    "commitizen": "^3.0.5",
+    "commitizen": "^4.0.5",
     "cz-customizable": "^6.0.0",
     "eslint": "^5.13.0",
     "eslint-config-xo-space": "^0.21.0",
