@@ -1646,6 +1646,11 @@ config-chain@^1.1.11:
     ini "^1.3.4"
     proto-list "~1.2.1"
 
+confusing-browser-globals@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.9.tgz#72bc13b483c0276801681871d4898516f8f54fdd"
+  integrity sha512-KbS1Y0jMtyPgIxjO7ZzMAuUpAKMt1SzCL9fsrKsX6b0zJPTaT0SiSPmewwVZg9UAO83HVIlEhZF84LIjZ0lmAw==
+
 console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
@@ -2203,17 +2208,19 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-xo-space@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-xo-space/-/eslint-config-xo-space-0.21.0.tgz#52987f385e44750056e760000561a2f8f843baac"
-  integrity sha512-4/Ko662Ghi1hgAF5H9Z37isg7WAeW1eGaY85pf/KLdLaif5qSPqpRZzaFzKjfCgkz3tU1GgpUIYYcMpLetNdyQ==
+eslint-config-xo-space@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-xo-space/-/eslint-config-xo-space-0.25.0.tgz#143f0c535b86419403f9213f71c63dfda46356ef"
+  integrity sha512-VfTIivCRdpIc8pIeSOn5hZsoPXZJiJ8tj0iemq5FZgRXFLH78Riat/EFF257gUNJbNuY+xaN8q0EMjKtgeGIIQ==
   dependencies:
-    eslint-config-xo "^0.26.0"
+    eslint-config-xo "^0.30.0"
 
-eslint-config-xo@^0.26.0:
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-xo/-/eslint-config-xo-0.26.0.tgz#19dcfb1e3038dd440f5c5e4b4d11bb3128801b24"
-  integrity sha512-l+93kmBSNr5rMrsqwC6xVWsi8LI4He3z6jSk38e9bAkMNsVsQ8XYO+qzXfJFgFX4i/+hiTswyHtl+nDut9rPaA==
+eslint-config-xo@^0.30.0:
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-xo/-/eslint-config-xo-0.30.0.tgz#a5d731e8e8ac9b65a0581dcc46be0bd84d837e32"
+  integrity sha512-0C+Hl1Mfrbh+LMc2A2v2BabI+n0MoVHYyGJOJoWped/Tfh/OoyZ7gLyed5vLqVR4czjR8Zi7DGW2S1nTGKUY4w==
+  dependencies:
+    confusing-browser-globals "1.0.9"
 
 eslint-scope@^4.0.0:
   version "4.0.0"
